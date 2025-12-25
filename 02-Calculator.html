@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Calculator</title>
+<style>
+button{
+margin-left: 2px;
+background-color: rgb(92, 89, 84);
+color: white;
+font-size: 30px;
+border: none;
+padding: 10px;
+border-width: 1px;
+border-color: solid;
+border-radius: 4px;
+margin-bottom: -5px;
+cursor: pointer;
+
+}
+
+button:hover{
+background-color: rgb(54, 52, 52);
+transition-duration: 0.1s;
+}
+
+.opera{
+background-color: rgb(160, 160, 160);
+
+}
+.opera:hover{
+background-color: lightgray;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+<p>
+   <button onclick="
+   calculation=calculation+'1'
+   console.log(calculation);
+   
+   ">1</button>
+
+
+<button onclick="
+calculation=calculation+'2'
+console.log(calculation);
+
+">2</button>
+
+
+<button onclick="
+calculation+='3'
+console.log(calculation);
+
+">3</button>
+
+</p>
+
+<p>
+
+<button
+onclick="
+calculation=calculation+'4'
+console.log(calculation);
+
+"
+> 4</button>
+
+
+<button
+onclick="
+calculation=calculation+'5'
+console.log(calculation);
+
+"
+>5</button>
+
+
+<button onclick="
+calculation=calculation+'6'
+console.log(calculation);
+
+"
+>6</button>
+
+
+</p>
+
+<p>
+
+<button onclick="
+calculation=calculation+'7'
+console.log(calculation);
+
+"
+>7</button>
+
+<button onclick="
+calculation=calculation+'8'
+console.log(calculation);
+
+"
+>8</button>
+
+<button onclick="
+calculation=calculation+'9'
+console.log(calculation);
+
+"
+>9</button>
+
+</p>
+
+<p>
+<button onclick="
+calculation=calculation+'10'
+console.log(calculation);
+
+"
+>10</button>
+
+<button class="opera" onclick="
+calculation+='+'
+console.log(calculation);
+
+">+</button>
+
+<button class="opera" onclick="
+calculation=eval(calculation)
+console.log(calculation);
+
+">=</button>
+
+
+</p>
+
+<button onclick="
+calculation='';
+console.log(`Cleared:0`)
+
+
+">CLR</button>
+
+
+<script>
+let calculation='';
+alert('Battling with some basic arithmetics..?..I goch ya dude. Hit OK..Lets rock and roll')
+
+
+</script>
+
+</body>
+</html>

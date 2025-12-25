@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and loops</title>
+</head>
+<body>
+    
+
+    <script>
+/*
+        const myArray=[23,45,67,78];
+        console.log(myArray);
+        console.log(myArray[2]);
+        console.log(myArray[1]);
+        myArray[2]='Danny';
+        console.log(myArray);
+
+        //Checking the lenght of an array
+        console.log(myArray.length);
+        //Adds an a value to the end of an array
+        myArray.push('Sandy')
+        console.log(myArray);
+
+        const stay=[23,45,6, {name:'Ama', Age:45}]
+        console.log(stay);
+
+
+        //.splice removes a value from an array
+        myArray.slice(1,2);
+        console.log(myArray)
+
+*/
+ let i=1
+ while(i<5){
+    console.log(i);
+    i=i+1
+  
+ }
+
+ for( let i=0; i<=5; i++){
+console.log(i);
+ }
+
+ //Non-standard loop.. Generate random numbers until one that's atleast 0.5
+
+ let randomNumber=0;
+ while(randomNumber<0.5){
+randomNumber=Math.random();
+
+ }
+ console.log(randomNumber)
+ //Looping through arrays
+ 
+ /*
+ ..outputs the array 'myArray' three times
+const myArray=['Eat', 'sleep','code']
+for(i=0; i< myArray.length; i++){
+   console.log(myArray) 
+}*/
+
+const myArray=['Eat', 'sleep','code']
+for(i=0; i< myArray.length; i++){
+    const output=myArray[i];
+   console.log(output) 
+}
+
+
+//Display a name three times
+/*
+const name=['daniel','Daniel','daniel']
+for(i=0; i<name.length; i++){
+    console.log(`my name is:${name[i]}`);
+}
+
+
+let name='daniel'
+for(i=0; i<3; i++){
+    console.log(`${i}.my name is:${name}`);
+}*/
+
+
+// find the total of 3 numbers
+const newArray=[4,5,7]
+let total=0;//Acumulator
+for(i=0; i< newArray.length; i++){
+const second= newArray[i]
+total=total+second;
+
+}
+console.log(total)
+
+//double the values in'newArray'
+const double=[]
+for(i=0;i<newArray.length;i++){
+const hey=newArray[i];
+double.push(2*hey);
+
+}
+console.log(double)
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+
+.first-button{
+    background-color: rgb(212, 212, 212);
+    color: black;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.is-toggled{
+    background-color: black;
+    color: white;
+    
+}
+
+
+</style>
+<body>
+    <button class="first-button js-button" onclick="
+        first();
+        
+        "> Gaming</button>
+        <script>
+            const newButton=document.querySelector('.js-button')
+            function first(){
+                /* removes is-toggled css and adds a new css first-button*/
+             if(! newButton.classList.contains('is-toggled')){
+                newButton.classList.add('is-toggled')
+             }   else{
+                newButton.classList.remove('is-toggled')
+             }
+            }
+        </script>
+</body>
+</html>

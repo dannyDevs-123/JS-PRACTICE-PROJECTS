@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+<button onclick="
+//Calling Function 1
+playGame('rock');
+    ">
+
+Rock
+</button>
+
+<button onclick="
+playGame('paper');
+">
+
+Paper
+</button>
+
+<button onclick="
+playGame('Scissors');
+">
+
+Scissors
+</button>
+
+<script>
+//Function 1 to be called..
+function playGame(playerMove){
+
+    const computerTake= pickComputerMove();
+  
+  let outcome='';
+  
+  if (playerMove==='Scissors'){
+    if(computerTake==='rock'){
+   outcome='You loose'
+   }else if(computerTake ==='Paper'){
+      outcome='You Win'
+   }else if(computerTake ==='Scissors'){
+  outcome='Tie'
+   }
+  
+   }else if(playerMove==='paper'){
+
+ if(computerTake==='rock'){
+ outcome='You Win'
+ }else if(computerTake ==='Paper'){
+    outcome='Tie'
+ }else if(computerTake ==='Scissors'){
+outcome='You loose'
+ }
+
+ 
+  } else if(playerMove==='rock'){
+
+if(computerTake==='rock'){
+ outcome='Tie'
+ }else if(computerTake ==='Paper'){
+    outcome='You loose'
+ }else if(computerTake ==='Scissors'){
+outcome='You win'
+ }
+
+ 
+  }
+
+   
+  alert(`You chose ${playerMove} and the commputer took: ${computerTake}\n \n Result:${outcome} \n Hit OK`)
+
+
+}
+
+//Function 2.
+
+function pickComputerMove(){
+ const randomNumber=Math.random();
+ let computerTake='';
+
+
+if(randomNumber>=0 && randomNumber <1/3){
+computerTake='rock'
+}else if(randomNumber>=1/3 && randomNumber <2/3 ){
+computerTake='Paper'
+
+}else if(randomNumber>=2/3 && randomNumber<1){
+    computerTake='Scissors'
+}
+
+return computerTake;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables_practice</title>
+    <style>
+button{
+border: none;
+border-radius: 5px;
+background-color: lightgrey;
+border-width: 1px;
+border-color: solid;
+font-family: Arial, Helvetica, sans-serif;
+padding: 5px;
+margin-left: 5px;
+cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    
+<button>Cart Quantity</button>
+
+<button onclick="
+cartQuantity=cartQuantity-1
+console.log(cartQuantity);
+
+">Remove from Cart</button>
+
+<button onclick="
+cartQuantity+=4
+console.log(cartQuantity);
+
+">+4</button>
+
+<button onclick="
+cartQuantity+=5
+console.log(cartQuantity);
+
+">+5</button>
+
+<button onclick="
+cartQuantity-=2
+console.log(cartQuantity);
+
+">-2</button>
+
+<button onclick="
+cartQuantity-=3
+console.log(cartQuantity);
+
+">-3</button>
+
+<button onclick="
+cartQuantity=0
+console.log('Cart was reset');
+console.log(`Cart Quantity:${cartQuantity}`);
+
+">
+Reset Cart
+</button>
+
+
+    <script>
+
+let name='Don_Fanky'
+console.log(`My Name is: ${name}` );
+
+let cost=(500+(2*300)+900)/100
+console.log(`Cost of Food:$${cost}`);
+
+let taxCharge=(cost)*0.1
+console.log(`Tax(10%):$${taxCharge}`);
+
+let cartQuantity=0
+
+alert("A welcoming pleasure on my page..Promise you'll like it");
+alert('Right click anywhere on the screen... 1.Select Inspect from the drop-down..2.Hit console from the second pop-up..and BOOM!..See magic');
+alert('Hit the buttons on the Interface and see illussions transform into realities with a click of a button!!');
+
+    </script>
+</body>
+</html>

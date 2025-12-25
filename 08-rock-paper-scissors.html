@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+
+<!--link to styles-->
+<link rel="stylesheet" href="styles/rock-paper-scissors.css">
+
+<body>
+<p style="font-size: 30px; font-weight: bold;">Rock Paper Scissors</p>
+
+<button class="move-button" onclick="
+//Calling Function 1
+playGame('rock');
+    ">
+<img class="move-icon" src="Rock-paper-scissors img/rock-emoji.png" alt="">
+ </button>
+
+<button class="move-button" onclick="
+playGame('paper'); 
+">
+
+<img class="move-icon" src="Rock-paper-scissors img/paper-emoji.png" alt="">
+</button>
+
+<button class="move-button" onclick="
+playGame('Scissors');
+">
+
+<img class="move-icon" src="Rock-paper-scissors img/scissors-emoji.png" alt="">
+</button>
+
+<!-- Third paragraph for DOM-->
+<p class="js-move "></p>
+
+<!--second paragraph for DOM-->
+<p class="js-result result"></p>
+
+<!--First paragraph for DOM-->
+<p class="js-score"></p>
+
+<button class="reset" onclick="
+score.wins=0;
+score.ties=0;
+score.losses=0;
+localStorage.removeItem('score');
+text();
+">
+  Reset
+</button>
+
+<script src="Script/09-rock-paper-scissors.js">
+</script>
+
+</body>
+</html>

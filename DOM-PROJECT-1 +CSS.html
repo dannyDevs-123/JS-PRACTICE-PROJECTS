@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    font-family: Arial;
+}
+
+.subscribe{
+    background-color: rgb(28, 31, 28);
+    border: none;
+    border-color: solid;
+    border-width: 1px;
+    border-radius: 7px;
+    width: 100px;
+    padding:10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+.is-Subscribed{
+background-color: rgb(240, 240,240);
+color: black;
+}
+
+.input-style{
+padding: 10px;
+font: 15px;
+}
+
+.calc-style{
+background-color: green;
+font-size: 15px;
+padding: 11px 15px;
+cursor: pointer;
+border: none;
+color: white;
+margin-left: 3px;
+}
+
+</style>
+
+
+<body>
+  
+<!--<button onclick="
+    const firstButton = document.querySelector('button');
+    if(firstButton.innerHTML==='Subscribe'){
+      firstButton.innerHTML='Subscribed'
+    }else{
+        firstButton.innerHTML='Subscribe';
+    }
+    ">Subscribe</button>-->
+
+    <button class="firstButton subscribe" onclick="
+    Subscribe();
+    ">Subscribe</button>
+
+    <p>Amazon Shipping calculator</p>
+    <input class="js-textbox input-style" type="text" placeholder="cost of order" onkeydown="
+   handleCostKeyDown();
+    ">
+
+    <button class="calc-style" onclick="
+      AmazonProject();
+
+    ">Calculate</button>
+
+    <p class="js-display"></p>
+
+    <p class="Notice"></p>
+
+    <script>
+        
+        
+
+function Subscribe(){
+    const firstButton = document.querySelector('.firstButton');
+    if(firstButton.innerHTML==='Subscribe'){
+      firstButton.innerHTML='Subscribed'
+      firstButton.classList.add('is-Subscribed')
+    }else{
+        firstButton.innerHTML='Subscribe';
+        firstButton.classList.remove('is-Subscribed')
+    }
+}
+    function AmazonProject(){
+        const textBox= document.querySelector('.js-textbox');
+      let cost=Number(textBox.value);
+    if(cost < 40){
+        cost=(cost+10);
+    }
+    document.querySelector('.js-display').innerHTML=`Total is:$${cost}`;
+
+    
+    
+    }
+
+function handleCostKeyDown(){
+    if(event.key==='Enter'){
+        AmazonProject();
+    }
+}
+  
+    </script>
+
+</body>
+</html>.

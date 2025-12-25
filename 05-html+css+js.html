@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+.input-style{
+padding: 10px;
+font: 15px;
+}
+
+.calc-style{
+background-color: green;
+font-size: 15px;
+padding: 11px 15px;
+cursor: pointer;
+border: none;
+color: white;
+margin-left: 3px;
+}
+
+.styleError{
+    color: red;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+</style>
+<body>
+    
+   
+
+    <p>Amazon Shipping calculator</p>
+    <input class="js-textbox input-style" type="text" placeholder="cost of order" onkeydown="
+   handleCostKeyDown();
+    ">
+
+    <button class="calc-style" onclick="
+      AmazonProject();
+
+    ">Calculate</button>
+
+    <p class="js-display "></p>
+    <p class="notice styleError"></p>
+   
+
+    <script>
+        
+        
+
+
+    function AmazonProject(){
+        const textBox= document.querySelector('.js-textbox');
+      let cost=Number(textBox.value);
+    if(cost>0 && cost <40){
+        cost=(cost+10);
+        document.querySelector('.js-display').innerHTML=`Total is:$${cost}`;
+} else if( cost>40){
+cost=(cost);
+document.querySelector('.js-display').innerHTML=`Total is:$${cost}`;
+}
+
+else if( cost < 0){
+    document.querySelector('.notice').innerHTML=`Error: Cost can not be less than $0`;
+}
+
+
+    
+    
+    }
+
+
+function handleCostKeyDown(){
+    if(event.key==='Enter'){
+        AmazonProject();
+    }
+}
+  
+    </script>
+
+    
+</body>
+</html>

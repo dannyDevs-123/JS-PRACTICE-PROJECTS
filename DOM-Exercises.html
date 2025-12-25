@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Exercise</title>
+</head>
+<body>
+   <button>9a</button> 
+   <button class="secondButt">9b</button> <br> <br>
+
+  <!--EX 9c-->
+    <button class="thirdButt" onclick="
+    document.querySelector('.newpara').innerHTML='You chose:heads'
+    ">heads</button>
+
+    <button class="fourthButt" onclick="
+    document.querySelector('.newpara').innerHTML='You chose:tails'
+
+    ">tails</button>
+
+    <p class="newpara"></p>
+
+    <!--Exercise 9d-->
+  <input class="js-input" type="text" placeholder="name" onkeydown="
+  Exercise9d();
+  ">
+  <button onclick="
+  Exercise9d();
+  ">Submit</button>
+
+  <p class="secPara"></p>
+
+  
+
+
+   <script>
+
+    //EX.9a
+   const display= document.querySelector('button');
+   console.log(display);
+
+    //Ex 9b
+   const buttonTwo=document.querySelector('.secondButt');
+   buttonTwo.innerHTML='9b done'
+
+   function Exercise9d(){
+    if(event.key==='Enter'){
+      const text=document.querySelector('.js-input')
+  const butParagragh=`You name is: ${text.value}`
+  document.querySelector('.secPara').innerHTML=butParagragh;
+
+    }
+   }
+   
+
+   </script>
+</body>
+</html>

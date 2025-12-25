@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<style>
+.first-button, .second-button, .third-button{
+    background-color: rgb(212, 212, 212);
+    color: black;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.toggle{
+    background-color: black;
+    color: white;
+    
+}
+
+</style>
+<body>
+    <button class="first-button js-button-1" onclick="
+        button();
+        ">Gaming</button>
+    
+    <button class="second-button js-button-2" onclick="
+    secbutton();
+    ">Tech</button>
+    
+    <button class="third-button js-button-3" onclick="
+    thirdbutton();
+    ">Music</button>
+    
+    <script>
+        function button(){
+            const newButton=document.querySelector('.js-button-1')
+            if(!newButton.classList.contains('toggle')){
+                
+                newButton.classList.add('toggle')
+            }
+        }
+        function secbutton(){
+            const newButton=document.querySelector('.js-button-2')
+            if(!newButton.classList.contains('toggle')){
+                
+                newButton.classList.add('toggle')
+                
+            }else{
+                newButton.classList.remove('toggle')
+            }
+        }
+        function thirdbutton(){
+            const newButton=document.querySelector('.js-button-3')
+            if(!newButton.classList.contains('toggle')){
+                newButton.classList.add('toggle')
+            }else{
+                newButton.classList.remove('toggle')
+            }
+        }
+
+        function turnOffpreviousbutton(){
+            const previousButton=document.querySelector('.toggle')
+            if(previousButton){
+                previousButton.classList.remove('toggle')
+            }
+        }
+
+
+    </script>
+</body>
+</html>

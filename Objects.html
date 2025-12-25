@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Project</title>
+</head>
+<body>
+    
+
+
+<script>
+/*const product1={
+    name:'Basket Ball',
+    Price:`${2095} cents`,
+    'delivery-time':'3 days',
+   
+}
+console.log(product1);
+product1.Price=(`${(500+2095)} cents`);
+console.log(product1);
+console.log(product1);*/
+
+/*
+function comparePrice(product1,product2){
+object1={
+name1:product1,
+price:200}
+
+object2={
+name2:product2,
+price2:100
+}
+
+
+if(object1.price>object2.price2){
+return object1;
+
+}else if(object2.price2>object1.price){
+return object2;}
+}
+
+
+console.log(comparePrice('coffee','Rice'));
+*/
+
+
+
+//Alternative solu..
+
+function comparePrice(product1,product2){
+if(product1.price<product2.price){
+return product1
+}else{
+    return product2
+}
+
+
+
+}
+
+
+const product1={
+    name:'Banana',
+    price:200
+}
+
+const product2={
+    name:'Gari',
+    price:150
+}
+
+console.log(comparePrice(product1,product2));
+
+
+function isSameProduct(product1,product2){
+object2={
+    name3:product1,
+    price4:30
+}
+object3={
+   name4:product2,
+   price5:30
+}
+
+if(object2.name3===object3.name4 && object2.price4===object3.price5){
+return true
+}else{
+    return false
+};
+
+//alternative solution
+
+
+
+
+}
+console.log(isSameProduct('Beans','Beans'));
+
+console.log('hello'.length)
+console.log('hello'.toUpperCase())
+console.log('hello'.toLowerCase())
+</script>
+</body>
+</html>

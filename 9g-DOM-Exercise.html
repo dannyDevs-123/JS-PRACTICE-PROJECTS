@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Amazon Shipping calculator</p>
+    <input class="js-textbox" type="text" placeholder="cost of order" onkeydown="
+   handleCostKeyDown();
+    ">
+
+    <button onclick="
+      AmazonProject();
+
+    ">Calculate</button>
+
+    <p class="js-display"></p>
+
+    <p class="Notice"></p>
+
+    <input class="secInput" type="text" placeholder="Type something" onkeyup="
+    
+    ">
+
+    <p class="key"></p>
+
+
+<script>
+
+function AmazonProject(){
+        const textBox= document.querySelector('.js-textbox');
+      let cost=Number(textBox.value);
+    if(cost < 40){
+        cost=Math.round((cost+10));
+    }
+    document.querySelector('.js-display').innerHTML=`Total is:$${cost}`;
+
+    
+    }
+
+function handleCostKeyDown(){
+    if(event.key==='Enter'){
+        AmazonProject();
+    }
+}
+
+</script>
+
+
+</body>
+</html>

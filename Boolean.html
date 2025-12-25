@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean Practice</title>
+</head>
+<body>
+    
+
+
+<script>
+//Exercise 6a to be displayed in the console.
+let dayHour=16;
+let name='Don Fanky';
+if (dayHour>=6 && dayHour<12){
+console.log('Good morning '+name )
+}else if (dayHour>=13 && dayHour<17){
+console.log('Good afternoon! '+ name) 
+}else {
+console.log('Good night! '+ name)
+}
+
+//Exercise 6d to be executed in console
+let age=30;
+if(age<=6 || age>=65){
+console.log('Discount')
+} else{
+    console.log('No Discount')
+}
+
+let randomNumber=Math.random();
+let result='';
+let guess='tails'
+if(randomNumber<0.5){
+    result='heads'
+}else{
+    result='tails'
+}
+if(guess===result){
+console.log('You win!')
+}else{
+console.log('You loose')
+}
+
+
+
+</script>
+
+</body>
+</html>

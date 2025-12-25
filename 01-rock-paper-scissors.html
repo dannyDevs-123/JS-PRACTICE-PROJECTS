@@ -1,0 +1,189 @@
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Rock_Paper_Scissors</title>
+
+                <style>
+                .rock{
+                background-color: rgba(224, 99, 27, 0.829);
+                border: none;
+                padding: 12px;
+                border-color: solid;
+                border-width: 1px;
+                border-radius: 8px;
+                margin-right: 10px;
+                
+                }
+                .rock:hover{
+                box-shadow: 5px 8px 10px rgb(151, 151, 11);
+                background-color: rgb(73, 95, 110);    
+                color: white;
+                transition-duration: 0.5s;
+                cursor: pointer;
+                }
+
+                .paper{
+                background-color: rgba(243, 226, 216, 0.829);
+                border: none;
+                padding: 12px;
+                border-color: solid;
+                border-width: 1px;
+                border-radius: 8px;
+                margin-right: 10px;
+                cursor: pointer;
+                }
+                .paper:hover{
+                box-shadow: 5px 8px 10px rgb(11, 151, 81);
+                background-color: rgb(73, 95, 110);    
+                color: white;
+                transition-duration: 0.5s;
+                cursor: pointer;
+                }
+
+                .Scissors{
+                background-color: rgba(199, 188, 182, 0.829);
+                border: none;
+                padding: 12px;
+                border-color: solid;
+                border-width: 1px;
+                border-radius: 8px;
+                margin-right: 10px;
+                }
+                .Scissors:hover{
+                box-shadow: 5px 8px 10px rgb(11, 151, 41);
+                background-color: rgb(73, 95, 110);    
+                color: white;
+                transition-duration: 0.5s;
+                cursor: pointer;
+                }
+
+                </style>
+
+                    
+                </head>
+
+
+                <body>
+
+                <button class="rock" onclick="
+                const randomNumber=Math.random();
+                let computerPick='';
+                if( randomNumber>=0 && randomNumber <1/3){
+
+                computerPick='rock'
+
+                }else if(randomNumber>=1/3 && randomNumber <2/3){
+                computerPick='Paper'
+
+                }else if(randomNumber>=2/3 && randomNumber<1){
+                computerPick='Scissors'
+
+
+                }
+
+                let result='';
+                if(computerPick=='rock'){
+                result='Tie'
+
+                }else if(computerPick=='Paper'){
+
+                result='You lose'
+                }else if(computerPick=='Scissors'){
+                result='You Win'
+
+                }
+
+                alert(`You chose Rock and the Computer took ${computerPick}.\n RESULT:${result} \n Hit Ok to continue`);
+
+                ">
+
+                Rock
+                </button>
+
+                <button  class="paper" onclick="
+                const randomNumber=Math.random();
+
+                let computerPick='';
+                if( randomNumber>=0 && randomNumber <1/3){
+
+                computerPick='rock'
+
+                }else if(randomNumber>=1/3 && randomNumber <2/3){
+                computerPick='Paper'
+
+                }else if(randomNumber>=2/3 && randomNumber<1){
+                computerPick='Scissors'
+
+
+                }
+
+                let result='';
+                if(computerPick=='rock'){
+                result='You Win'
+
+                }else if(computerPick=='Paper'){
+
+                result='Tie'
+                }else if(computerPick=='Scissors'){
+                result='You lose'
+
+                }
+
+                alert(`You chose Paper and the Computer took ${computerPick}.\n RESULT:${result}\n Hit OK to continue`);
+
+
+                ">
+
+                Paper
+
+                </button>
+
+                <button class="Scissors" onclick="
+                const randomNumber=Math.random();
+                let computerPick='';
+                if( randomNumber>=0 && randomNumber <1/3){
+
+                computerPick='rock'
+
+                }else if(randomNumber>=1/3 && randomNumber <2/3){
+                computerPick='Paper'
+
+                }else if(randomNumber>=2/3 && randomNumber<1){
+                computerPick='Scissors'
+
+
+                }
+
+                let result='';
+                if(computerPick=='rock'){
+                result='You lose'
+
+                }else if(computerPick=='Paper'){
+
+                result='You Win'
+                }else if(computerPick=='Scissors'){
+                result='Tie'
+
+                }
+
+                alert(`You chose Scissors and the Computer took ${computerPick}.\n RESULT:${result} \n Hit OK to continue`);
+
+
+                ">
+
+
+                Scissors
+                </button>
+
+
+
+
+
+
+
+                <script>
+                </script>    
+                </body>
+                </html>
